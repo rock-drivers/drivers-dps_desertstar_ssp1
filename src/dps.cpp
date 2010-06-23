@@ -91,7 +91,7 @@ namespace dps
     
     
     
-    std::cout << "secs: " << tim.tv_sec << " , usecs: " << tim.tv_usec << std::endl;
+    //std::cout << "secs: " << tim.tv_sec << " , usecs: " << tim.tv_usec << std::endl;
     
     start = currentLine.find_first_of(",");
     end = currentLine.find_first_of(",",start+1);
@@ -102,7 +102,7 @@ namespace dps
     pr.pressure = atof(currentLine.substr(start+1,end-start-1).c_str());
     pr.timestamp = tim.tv_sec * 1000 + tim.tv_usec / 1000;
     
-    printPressure(pr);
+    //printPressure(pr);
     
     
     return true;

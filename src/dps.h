@@ -33,12 +33,12 @@ namespace dps
       bool closeComPort();
       void flushPort(int timeout_msecs);
 
+      int comPort;
 
      
 
 
     private:
-      int comPort;
   };
 
 } // end namespace DummyProject
