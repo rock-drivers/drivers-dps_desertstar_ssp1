@@ -4,8 +4,26 @@
 int main(int argc, char** argv)
 {
 	dps::DPS dps;
-	dps.openComPort("/dev/ttyS0");
 
+        int port = 0;
+        if(argc < 2)
+        {
+            std::cout << "No port given - attempting to open /dev/ttyS0..." << std::endl;
+	    port = dps.openComPort("/dev/ttyS0");
+        }
+        else
+        {
+            std::cout << "Attempting to open port " << argv[1] << " ..." << std::endl;
+	    port = dps.openComPort(argv[1]);
+        }
+
+        if(port == -1)
+        {
+           std::cout << "Error - could not open port!" << std::endl;
+           return -1;
+        }
+        else
+           std::cout << "OK." << std::endl;
         dps.the_file_stream.open("dps.txt");
 
 	
