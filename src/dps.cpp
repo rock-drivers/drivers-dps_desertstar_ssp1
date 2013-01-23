@@ -1,6 +1,7 @@
 #include "dps.h"
 #include "dps_types.h"
 #include <termios.h>
+#include <unistd.h>
 
 namespace dps
 {
