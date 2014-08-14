@@ -1,7 +1,9 @@
-rock_library(dps_desertstar-ssp1
-    SOURCES Dummy.cpp
-    HEADERS Dummy.hpp)
+rock_library(dps_desertstar_ssp1
+    SOURCES Driver.cpp
+    HEADERS Driver.hpp
+    DEPS_PKGCONFIG base-lib iodrivers_base 
+    )
 
-rock_executable(dps_desertstar-ssp1_bin Main.cpp
-    DEPS dps_desertstar-ssp1)
+rock_executable(dps_desertstar_ssp1_bin Main.cpp
+    DEPS dps_desertstar_ssp1)
 
