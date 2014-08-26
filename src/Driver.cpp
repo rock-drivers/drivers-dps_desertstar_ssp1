@@ -20,7 +20,7 @@ namespace dps_desertstar_ssp1
             float unknown; //Unknown field so far seems to be 0.0 always
             float value;
             if(sscanf((char*)buffer,"$YXDPT,%f,%f*%02X",&value,&unknown,&checksum)){
-                depth.position[2] = value;
+                depth.position[2] = (-value+1)*10;
                 for(std::list<Interface*>::iterator it = handler.begin(); it != handler.end(); it++){
                     (*it)->newDepthData(depth);
                 }
