@@ -33,6 +33,10 @@ namespace dps_desertstar_ssp1
         
     }
 
+    void Driver::updateVaricance(double variance){
+        depth.cov_position(2,2) = variance;
+    }
+
     void Driver::registerHandler(Interface *interface){
         handler.push_back(interface);
     }

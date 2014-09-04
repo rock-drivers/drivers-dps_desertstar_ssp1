@@ -22,6 +22,7 @@ namespace dps_desertstar_ssp1
 		public:
                     Driver(const double variance =  0.0216505327374);
                     void process();
+                    void updateVaricance(double variance);
                     void registerHandler(Interface *interface);
                     void unregisterHandler(Interface *interface);
                     virtual int extractPacket(uint8_t const* buffer, size_t buffer_size) const;
