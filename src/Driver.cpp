@@ -71,7 +71,7 @@ namespace dps_desertstar_ssp1
 	
 
         //Creating a hex-representation out of this (more easy instead of chreating value out of string)
-        char sign[2];
+        char sign[3];
         sprintf(sign,"%02X",checksum);
         //Checksum match
         if(memcmp(sign,buffer+17,2) == 0){
