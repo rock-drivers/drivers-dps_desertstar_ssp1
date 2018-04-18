@@ -11,7 +11,7 @@ namespace dps_desertstar_ssp1
     }
 
     void Driver::process(){
-        int cnt = readPacket(buffer, DESERTSTAR_BUFFER_SIZE, base::Time::fromSeconds(1));
+        int cnt = readPacket(buffer, DESERTSTAR_BUFFER_SIZE, m_read_timeout);
         //Got a complete package
         if(cnt == 20){
             //Escaping the string to make sure sscanf works properly
